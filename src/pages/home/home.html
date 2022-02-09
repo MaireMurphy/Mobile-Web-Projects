@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> G00375722 </ion-title>
+
+    <!-- <button ion-button icon-only  > -->
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openSettings()">
+        <ion-icon name="settings"></ion-icon>
+      </button>
+    </ion-buttons>
+    <!--</button> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <h1>{{appStatus}}</h1>
+  <div [hidden]="hideSection">
+    <img height="50" width="80" [src]="flagPng" />
+    <h3>Temperature:</h3>
+
+    <h2>{{ temperature }}</h2>
+    <h3>Weather:</h3>
+    <h2>{{ description }}</h2>
+    <img [src]="iconPic" />
+
+    <h3>Wind From:</h3>
+    <h2>{{ windDirection }}</h2>
+    <button ion-button (click)="openNews()">News</button>
+    <button ion-button (click)="openHolidays()">Holidays</button>
+  </div>
+</ion-content>
